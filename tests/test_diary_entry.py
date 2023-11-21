@@ -14,3 +14,12 @@ def test_diary_entry_count_words_example_2():
     actual = diary_entry.count_words()
     expected = 4
     assert actual == expected
+
+one_hundred_words =  "one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one one"
+
+def test_diary_entry_reading_time():
+    diary_entry = DiaryEntry("One hundred words", one_hundred_words)
+    # wpm = 100 words per minute
+    actual = diary_entry.reading_time(100)
+    expected = 1 # this is one minute
+    assert actual == expected
