@@ -30,12 +30,25 @@ def test_add_diary_entry_count_words_for_one_entry():
     expected = 4
     assert actual == expected
 
-# def test_add_diary_entry_count_words_for_one_entry():
-#     diary = Diary()
-#     diary_entry_1 = DiaryEntry("Book title number 1", "this is four words")
-#     diary_entry_2 = DiaryEntry("Book title number 6", "this is more like six words")
-#     diary.add(diary_entry_1)
-#     diary.add(diary_entry_2)
-#     actual = diary.count_words()
-#     expected = 10
-#     assert actual == expected
+def test_add_diary_entry_count_words_for_one_two_entries():
+    diary = Diary()
+    diary_entry_1 = DiaryEntry("Book title number 1", "this is four words")
+    diary_entry_2 = DiaryEntry("Book title number 6", "this is more like six words")
+    diary.add(diary_entry_1)
+    diary.add(diary_entry_2)
+    actual = diary.count_words()
+    expected = 10
+    assert actual == expected
+
+def test_add_diary_entry_count_words_for_one_three_entries():
+    # here the '...' isn't really a word, but we choose to leaveit for now and consider the logic later
+    diary = Diary()
+    diary_entry_1 = DiaryEntry("Book title number 1", "this is four words")
+    diary_entry_2 = DiaryEntry("Book title number 6", "this is more like six words")
+    diary_entry_3 = DiaryEntry("Book title number 6", "this is … ")
+    diary.add(diary_entry_1)
+    diary.add(diary_entry_2)
+    diary.add(diary_entry_3)
+    actual = diary.count_words()
+    expected = 13
+    assert actual == expected
