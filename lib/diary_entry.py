@@ -8,8 +8,7 @@ class DiaryEntry:
     def __init__(self, title, contents):
         self.title = title
         self.contents = contents
-        pass
-#
+
     def count_words(self):
         list_of_contents_words = self.contents.split()
         return len(list_of_contents_words)
