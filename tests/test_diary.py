@@ -21,3 +21,21 @@ def test_add_diary_entry_to_diary_entries_list():
     actual = diary.all()
     expected = diary.entries_list
     assert actual == expected
+
+def test_add_diary_entry_count_words_for_one_entry():
+    diary = Diary()
+    diary_entry_1 = DiaryEntry("Book title number 1", "this is four words")
+    diary.add(diary_entry_1)
+    actual = diary.count_words()
+    expected = 4
+    assert actual == expected
+
+# def test_add_diary_entry_count_words_for_one_entry():
+#     diary = Diary()
+#     diary_entry_1 = DiaryEntry("Book title number 1", "this is four words")
+#     diary_entry_2 = DiaryEntry("Book title number 6", "this is more like six words")
+#     diary.add(diary_entry_1)
+#     diary.add(diary_entry_2)
+#     actual = diary.count_words()
+#     expected = 10
+#     assert actual == expected

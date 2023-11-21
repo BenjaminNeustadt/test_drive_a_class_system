@@ -7,14 +7,15 @@ class Diary:
     def add(self, entry):
         self.entries_list.append(entry)
 
-#        # Returns:
-#        #   A list of instances of DiaryEntry
-
     def all(self):
         return self.entries_list
 
+    def count_words(self):
+        counter = 0
+        for element in self.entries_list:
+            counter += element.count_words()
+        return counter
 
-#    def count_words(self):
 #        # Returns:
 #        #   An integer representing the number of words in all diary entries
 #        # HINT:
