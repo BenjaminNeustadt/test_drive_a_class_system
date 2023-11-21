@@ -2,16 +2,10 @@
 
 class Diary:
     def __init__(self):
-        pass
+        self.entries = []
 #
-#    def add(self, entry):
-#        # Parameters:
-#        #   entry: an instance of DiaryEntry
-#        # Returns:
-#        #   Nothing
-#        # Side-effects:
-#        #   Adds the entry to the entries list
-#        pass
+    def add(self, entry):
+        self.entries.append(entry)
 #
 #    def all(self):
 #        # Returns:
