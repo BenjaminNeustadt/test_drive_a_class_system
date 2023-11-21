@@ -2,16 +2,18 @@
 
 class Diary:
     def __init__(self):
-        self.entries = []
-#
+        self.entries_list = []
+
     def add(self, entry):
-        self.entries.append(entry)
-#
-#    def all(self):
+        self.entries_list.append(entry)
+
 #        # Returns:
 #        #   A list of instances of DiaryEntry
-#        pass
-#
+
+    def all(self):
+        return self.entries_list
+
+
 #    def count_words(self):
 #        # Returns:
 #        #   An integer representing the number of words in all diary entries
